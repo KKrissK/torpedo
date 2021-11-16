@@ -15,13 +15,13 @@ public class MapVO {
     private final int numberOfRows;
     private final int numberOfColumns;
     private final int[][] map;
-    private final boolean[][] hajoe;
+    private boolean[][] hajoe = new boolean[0][];
 
     public MapVO(int numberOfRows, int numberOfColumns, int[][] map, boolean[][] fixed) {
         this.numberOfRows = numberOfRows;
         this.numberOfColumns = numberOfColumns;
         this.map = deepCopy(map);
-        this.hajoe = deepCopy(fixed);
+        this.hajoe = deepCopy(hajoe);
     }
 
     public int getNumberOfRows() {
